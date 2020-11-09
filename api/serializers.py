@@ -3,7 +3,7 @@ from api import models
 
 
 class InstituteSerializer(serializers.ModelSerializer):
-    class meta:
+    class Meta:
         model = models.Institute
         fields = "__all__"
 
@@ -11,6 +11,6 @@ class InstituteSerializer(serializers.ModelSerializer):
 class StudentSerializer(serializers.ModelSerializer):
 
     institute = InstituteSerializer(read_only =True)
-    class meta:
+    class Meta:
         model = models.Student
         fields = "__all__"
